@@ -5,9 +5,9 @@ using Volo.Abp.EntityFrameworkCore;
 
 namespace EasyAbp.WeChatManagement.MiniPrograms.MiniPrograms
 {
-    public class MiniProgramRepository : EfCoreRepository<MiniProgramsDbContext, MiniProgram, Guid>, IMiniProgramRepository
+    public class MiniProgramRepository : EfCoreRepository<IMiniProgramsDbContext, MiniProgram, Guid>, IMiniProgramRepository
     {
-        public MiniProgramRepository(IDbContextProvider<MiniProgramsDbContext> dbContextProvider) : base(dbContextProvider)
+        public MiniProgramRepository(IDbContextProvider<IMiniProgramsDbContext> dbContextProvider) : base(dbContextProvider)
         {
         }
     }
